@@ -1,6 +1,7 @@
 'use strict';
 const numberStudents = +prompt('How many students in your group?');
 let students = [];
+const DEFAULT_MARKS_AMOUNT = 5;
 
 // Sum
 function sum(x) {
@@ -14,7 +15,6 @@ function sum(x) {
 // Marks
 function getRandomMarks() {
 	const marks = [];
-	const DEFAULT_MARKS_AMOUNT = 5;
 	for (let i = 0; i < DEFAULT_MARKS_AMOUNT; i++) {
 		marks.push(Math.round(Math.random() * 12));
 	}
@@ -23,6 +23,7 @@ function getRandomMarks() {
 
 // getListStudents
 function getListStudents() {
+	const students = [];
 	let studentName;
 	for (let i = 0; i < numberStudents; i++) {
 		studentName = prompt('State the name of the student');
