@@ -1,7 +1,6 @@
 'use strict';
 const DEFAULT_MARKS_AMOUNT = 5;
 const numberStudents = +prompt('How many students in your group?');
-let student = [];
 
 // Working - function for sum
 function sum(x) {
@@ -15,6 +14,7 @@ function sum(x) {
 
 // Working - function for get student list
 function getStudentsList() {
+	let student = [];
 	for (let i = 0; i < numberStudents; i++) {
 		student[i] = {
 			name: prompt(`Enter ${i+1} student name`),
