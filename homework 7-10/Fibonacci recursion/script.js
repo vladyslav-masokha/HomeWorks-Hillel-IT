@@ -1,14 +1,10 @@
 'use strict';
 
-function fib(a) {
-  let x = 1;
-  let y = 1;
-  for (let i = 3; i <= a; i++) {
-    let c = x + y;
-    x = y;
-    y = c;
-  }
-  return y;
+function fib(n) {
+	if (n == 1 || n == 2) {
+		return 1;
+	} else {
+		return fib(n - 2) + fib(n - 1);
+	}
 }
-
-console.log(fib(17));
+console.log(fib(15));
