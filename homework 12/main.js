@@ -1,5 +1,6 @@
 'use strict';
-const inputValueEl = document.getElementById('input-value').value;
+let inputValueEl;
+let inputValueTextEl;
 
 const newElement = () => {
 	const liEl = document.createElement('li');
@@ -13,8 +14,8 @@ const newElement = () => {
 	liEl.style.marginTop = '5px';
 
 	// TODO: InputValue
-
-	const inputValueTextEl = document.createTextNode(inputValueEl);
+	inputValueEl = document.getElementById('input-value').value;
+	inputValueTextEl = document.createTextNode(inputValueEl);
 	liEl.append(inputValueTextEl);
 
 	switch (inputValueEl) {
