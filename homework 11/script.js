@@ -1,11 +1,11 @@
 'use strict';
-const getName = document.getElementById('block-name');
-const btnClick = document.getElementById('btn-click');
-const hiddenBlock = document.getElementById('hidden');
-const helloUser = document.getElementById('hello');
+const getNameEl = document.getElementById('block-name');
+const btnClickEl = document.getElementById('btn-click');
+const hiddenBlockEl = document.getElementById('hidden');
+const helloUserEl = document.getElementById('hello');
 
-btnClick.onclick = () => {
-	console.log(getName.value);
-	hiddenBlock.style.display = 'none';
-	helloUser.innerHTML = `Hello, ${getName.value}`;
+btnClickEl.onclick = () => {
+	console.log(getNameEl.value);
+	hiddenBlockEl.style.display = 'none';
+	helloUserEl.innerHTML = `Hello, ${getNameEl.value}`;
 };

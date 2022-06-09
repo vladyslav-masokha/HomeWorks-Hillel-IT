@@ -1,4 +1,5 @@
 'use strict';
+const inputValueEl = document.getElementById('input-value').value;
 
 const newElement = () => {
 	const liEl = document.createElement('li');
@@ -12,7 +13,7 @@ const newElement = () => {
 	liEl.style.marginTop = '5px';
 
 	// TODO: InputValue
-	const inputValueEl = document.getElementById('input-value').value;
+
 	const inputValueTextEl = document.createTextNode(inputValueEl);
 	liEl.append(inputValueTextEl);
 
@@ -29,6 +30,6 @@ const newElement = () => {
 };
 
 // TODO: Click on button
-const btnEl = (document.getElementById('btn-send').onclick = () => {
+document.getElementById('btn-send').onclick = () => {
 	newElement();
-});
+};
