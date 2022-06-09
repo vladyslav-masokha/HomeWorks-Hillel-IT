@@ -1,30 +1,36 @@
 body {
-	background: #005eff;
+	background: cornflowerblue;
+	overflow: hidden;
 	padding: 0;
 	margin: 0;
 }
 
-#main {
-	padding: 5px 0;
-	width: 307px;
+ul {
+	width: 80vw;
 	margin: 0 auto;
+	padding: 0;
+}
+
+#main {
+	margin: 20px 0;
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
 }
 
 #input-value {
-	outline: none;
-	border: none;
+	width: 50vw;
 	padding: 10px 15px;
 	border-radius: 10px;
-	border: 2px solid #003fac;
+	outline: none;
+	border: 2px dotted #0043a8;
 }
 
 #btn-send {
-	outline: none;
-	border: 2px solid #003fac;
+	width: 30vw;
+	padding: 10px 12px;
 	border-radius: 10px;
-	padding: 10px 15px;
-}
-
-.todo-list {
-	padding: 0;
+	outline: none;
+	margin-left: 5px;
+	border: 2px dotted #0043a8;
 }

@@ -1,33 +1,33 @@
 'use strict';
-let inputValueEl;
-let inputValueTextEl;
+const inputValueEl = document.getElementById('input-value');
+const todoListEl = document.querySelector('.todo-list');
 
 const newElement = () => {
 	const liEl = document.createElement('li');
 	// ! Styles for li elements
 	liEl.style.listStyle = 'none';
-	liEl.style.color = '#fff';
+	liEl.style.color = '#000';
 	liEl.style.fontSize = '1rem';
-	liEl.style.background = '#ffffff4d';
+	liEl.style.background = '#ffffff8a';
 	liEl.style.borderRadius = '20px';
 	liEl.style.padding = '10px 15px';
 	liEl.style.marginTop = '5px';
+	liEl.style.border = '2px dotted #003fac';
 
 	// TODO: InputValue
-	inputValueEl = document.getElementById('input-value').value;
-	inputValueTextEl = document.createTextNode(inputValueEl);
+	const inputValueTextEl = document.createTextNode(inputValueEl.value);
 	liEl.append(inputValueTextEl);
 
-	switch (inputValueEl) {
+	switch (inputValueEl.value) {
 		case '':
 			alert("You didn't enter text!");
 			break;
 
 		default:
-			document.querySelector('.todo-list').append(liEl);
+			todoListEl.append(liEl);
 			break;
 	}
-	document.getElementById('input-value').value = '';
+	inputValueEl.value = '';
 };
 
 // TODO: Click on button
