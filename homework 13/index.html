@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>HomeWork 13 | To Do List</title>
+		<!-- ? Icons Font Awesome-->
+		<script
+			src="https://kit.fontawesome.com/05616759dc.js"
+			crossorigin="anonymous"
+		></script>
+		<!-- ! Fonts Montserrat (Regular / Bold) / Kdam Thmor Pro (Regular)-->
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Montserrat:ital,wght@0,400;1,700&display=swap"
+			rel="stylesheet"
+		/>
+		<!--! CSS -->
+		<link rel="stylesheet" href="./css/style.css" />
+		<!--! SCRIPTS -->
+		<script src="./js/main.js" defer></script>
+		<!-- ? Favicon -->
+		<link rel="shortcut icon" href="./image/favicon.ico" type="image/x-icon" />
+	</head>
+	<body>
+		<div class="container">
+			<div class="new-task">
+				<input type="text" placeholder="Enter your task..." />
+				<button>Add</button>
+			</div>
+			<div class="buttons-control">
+				<button id="buttons-control__all-delete">All delete</button>
+				<button id="buttons-control__all-completed">All complete</button>
+			</div>
+			<ul id="list"></ul>
+		</div>
+	</body>
+</html>
