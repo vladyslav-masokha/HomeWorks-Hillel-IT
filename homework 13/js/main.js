@@ -10,7 +10,6 @@
 
 	const newTask = () => {
 		const taskValueTextEl = document.createTextNode(taskValueEl.value.trim());
-		if (!taskValueTextEl) return;
 
 		switch (taskValueEl.value.trim()) {
 			case '':
