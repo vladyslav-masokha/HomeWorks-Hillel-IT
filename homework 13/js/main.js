@@ -62,6 +62,7 @@
 	const completeAllTask = () => {
 		Array.from(todoListEl.children).forEach(el => {
 			el.classList.toggle('completed');
+			el.children[0].children[0].checked = true;
 		});
 	};
 
