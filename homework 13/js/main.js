@@ -53,7 +53,7 @@
 	};
 
 	const delAllTask = () => {
-		Array.from(todoListEl.children).forEach(el => {
+		[...todoListEl.children].forEach(el => {
 			el.remove();
 		});
 	};
