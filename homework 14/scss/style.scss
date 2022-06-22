@@ -1,0 +1,274 @@
+$font-stack: 'Montserrat', sans-serif;
+
+*,
+*:before,
+*:after {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body {
+	height: 100vh;
+	background: linear-gradient(135deg, #8052ec, #d161ff);
+}
+
+::selection {
+	color: #fff;
+	background: yellowgreen;
+}
+
+.hidden {
+	display: none;
+}
+
+#log-form {
+	width: 40%;
+	min-width: 320px;
+	position: absolute;
+	transform: translate(-50%, -50%);
+	top: 50%;
+	left: 50%;
+	padding: 30px;
+	background: #eee;
+	box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.5);
+	border-radius: 10px;
+
+	.title-form {
+		text-align: center;
+		color: #130f40;
+		font: {
+			family: $font-stack;
+			size: 36px;
+			weight: 700;
+		}
+	}
+	.login-form {
+		padding: 0 40px;
+
+		.font {
+			color: #130f40;
+			margin: 20px 0 0 0;
+			font: {
+				family: $font-stack;
+				size: 16px;
+				weight: 400;
+			}
+		}
+
+		input {
+			width: 100%;
+			padding: 10px 15px;
+			font-size: 16px;
+			outline: none;
+			border: 2px dotted #c4c4c4;
+		}
+
+		button {
+			width: 100%;
+			padding: 10px 15px;
+			margin: 30px 0 0 0;
+			color: #eee;
+			outline: none;
+			cursor: pointer;
+			background: #1a237e;
+			border: none;
+			border-radius: 10px;
+			transition: all 0.5s ease;
+			font: {
+				family: $font-stack;
+				size: 18px;
+				weight: 700;
+			}
+
+			&:hover {
+				background: #242faa;
+			}
+		}
+
+		#username-error,
+		#email-error,
+		#pass-error {
+			margin: 5px auto 0;
+			width: 90%;
+			color: #c62828;
+			background: #ff00001a;
+			text-align: center;
+			padding: 5px 0;
+			border-radius: 5px;
+			border: 2px solid #ef9a9a;
+			display: none;
+			font: {
+				family: $font-stack;
+				size: 18px;
+				weight: 700;
+			}
+		}
+	}
+}
+
+.container {
+	width: 40%;
+	min-width: 450px;
+	position: absolute;
+	transform: translate(-50%, -50%);
+	top: 50%;
+	left: 50%;
+	padding: 30px 40px;
+
+	.new-task {
+		position: relative;
+		background-color: #eee;
+		padding: 30px 20px;
+		border-radius: 5px;
+		box-shadow: 0 15px 30px #0000004d;
+
+		.title {
+			h2 {
+				text-align: center;
+				font-size: 36px;
+				color: #1a237e;
+				margin-bottom: 10px;
+			}
+		}
+
+		input {
+			width: 70%;
+			height: 45px;
+			border: 2px solid #d1d3d4;
+			padding: 12px;
+			color: #111111;
+			font: {
+				family: $font-stack;
+				weight: 700;
+				size: 18px;
+			}
+			position: relative;
+			border-radius: 5px;
+
+			&:focus {
+				outline: none;
+				border-color: #8052ec;
+			}
+		}
+
+		button {
+			position: relative;
+			float: right;
+			width: 20%;
+			height: 45px;
+			border-radius: 5px;
+			font-family: 'Poppins', sans-serif;
+			font-weight: 500;
+			font-size: 16px;
+			background-color: #8052ec;
+			border: none;
+			color: #eee;
+			cursor: pointer;
+			outline: none;
+		}
+
+		.for-error::placeholder {
+			color: #f00;
+		}
+	}
+
+	.buttons-control {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin: 20px 0;
+
+		#buttons-control__all-delete {
+			background: #ec5252;
+			padding: 5px 10px;
+			border-radius: 5px;
+			border: none;
+			cursor: pointer;
+			outline: none;
+			color: #eee;
+			box-shadow: 0 15px 30px #0000004d;
+			font: {
+				family: $font-stack;
+				weight: 700;
+				size: 18px;
+			}
+		}
+
+		#buttons-control__all-completed {
+			background: #52b3ec;
+			padding: 5px 10px;
+			border-radius: 5px;
+			border: none;
+			cursor: pointer;
+			outline: none;
+			color: #eee;
+			box-shadow: 0 15px 30px #0000004d;
+			font: {
+				family: $font-stack;
+				weight: 700;
+				size: 18px;
+			}
+		}
+	}
+
+	#list {
+		background-color: #eee;
+		padding: 30px 20px;
+		margin-top: 40px;
+		border-radius: 10px;
+		box-shadow: 0 15px 30px #0000004d;
+		width: 100%;
+		position: relative;
+		font: {
+			family: $font-stack;
+			weight: 700;
+			size: 18px;
+		}
+
+		li {
+			list-style: none;
+			background: #eee;
+			height: 50px;
+			padding: 5px 10px;
+			margin-top: 10px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			border-bottom: 2px solid #d1d3d4;
+			cursor: pointer;
+
+			&.completed {
+				text-decoration: line-through;
+			}
+
+			label {
+				display: flex;
+				align-items: center;
+				&.complete {
+					text-decoration: line-through;
+				}
+
+				span {
+					margin-left: 5px;
+				}
+			}
+		}
+
+		button {
+			background: #8052ec;
+			color: #eee;
+			height: 100%;
+			width: 60px;
+			padding: 0 10px;
+			border-radius: 5px;
+			border: none;
+			cursor: pointer;
+			outline: none;
+
+			&:hover {
+				background: #ec5252;
+				transition: all 0.6s ease-in-out;
+			}
+		}
+	}
+}

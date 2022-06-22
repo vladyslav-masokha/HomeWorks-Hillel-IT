@@ -1,0 +1,276 @@
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(135deg, #8052ec, #d161ff);
+}
+
+::-moz-selection {
+  color: #fff;
+  background: yellowgreen;
+}
+
+::selection {
+  color: #fff;
+  background: yellowgreen;
+}
+
+.hidden {
+  display: none;
+}
+
+#log-form {
+  width: 40%;
+  min-width: 320px;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  padding: 30px;
+  background: #eee;
+  -webkit-box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+#log-form .title-form {
+  text-align: center;
+  color: #130f40;
+  font-family: "Montserrat", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+}
+#log-form .login-form {
+  padding: 0 40px;
+}
+#log-form .login-form .font {
+  color: #130f40;
+  margin: 20px 0 0 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+#log-form .login-form input {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 16px;
+  outline: none;
+  border: 2px dotted #c4c4c4;
+}
+#log-form .login-form button {
+  width: 100%;
+  padding: 10px 15px;
+  margin: 30px 0 0 0;
+  color: #eee;
+  outline: none;
+  cursor: pointer;
+  background: #1a237e;
+  border: none;
+  border-radius: 10px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+}
+#log-form .login-form button:hover {
+  background: #242faa;
+}
+#log-form .login-form #username-error,
+#log-form .login-form #email-error,
+#log-form .login-form #pass-error {
+  margin: 5px auto 0;
+  width: 90%;
+  color: #c62828;
+  background: rgba(255, 0, 0, 0.1019607843);
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 5px;
+  border: 2px solid #ef9a9a;
+  display: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.container {
+  width: 40%;
+  min-width: 450px;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  padding: 30px 40px;
+}
+.container .new-task {
+  position: relative;
+  background-color: #eee;
+  padding: 30px 20px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3019607843);
+          box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3019607843);
+}
+.container .new-task .title h2 {
+  text-align: center;
+  font-size: 36px;
+  color: #1a237e;
+  margin-bottom: 10px;
+}
+.container .new-task input {
+  width: 70%;
+  height: 45px;
+  border: 2px solid #d1d3d4;
+  padding: 12px;
+  color: #111111;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  position: relative;
+  border-radius: 5px;
+}
+.container .new-task input:focus {
+  outline: none;
+  border-color: #8052ec;
+}
+.container .new-task button {
+  position: relative;
+  float: right;
+  width: 20%;
+  height: 45px;
+  border-radius: 5px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  background-color: #8052ec;
+  border: none;
+  color: #eee;
+  cursor: pointer;
+  outline: none;
+}
+.container .new-task .for-error::-webkit-input-placeholder {
+  color: #f00;
+}
+.container .new-task .for-error::-moz-placeholder {
+  color: #f00;
+}
+.container .new-task .for-error:-ms-input-placeholder {
+  color: #f00;
+}
+.container .new-task .for-error::-ms-input-placeholder {
+  color: #f00;
+}
+.container .new-task .for-error::placeholder {
+  color: #f00;
+}
+.container .buttons-control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px 0;
+}
+.container .buttons-control #buttons-control__all-delete {
+  background: #ec5252;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  color: #eee;
+  -webkit-box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3019607843);
+          box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3019607843);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+}
+.container .buttons-control #buttons-control__all-completed {
+  background: #52b3ec;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  color: #eee;
+  -webkit-box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3019607843);
+          box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3019607843);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+}
+.container #list {
+  background-color: #eee;
+  padding: 30px 20px;
+  margin-top: 40px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3019607843);
+          box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3019607843);
+  width: 100%;
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+}
+.container #list li {
+  list-style: none;
+  background: #eee;
+  height: 50px;
+  padding: 5px 10px;
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 2px solid #d1d3d4;
+  cursor: pointer;
+}
+.container #list li.completed {
+  text-decoration: line-through;
+}
+.container #list li label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.container #list li label.complete {
+  text-decoration: line-through;
+}
+.container #list li label span {
+  margin-left: 5px;
+}
+.container #list button {
+  background: #8052ec;
+  color: #eee;
+  height: 100%;
+  width: 60px;
+  padding: 0 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+.container #list button:hover {
+  background: #ec5252;
+  -webkit-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
+}
