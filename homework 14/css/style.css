@@ -140,6 +140,21 @@ body {
   outline: none;
   border-color: #8052ec;
 }
+.container .new-task #task-error {
+  display: none;
+  margin: 5px auto 0;
+  width: 90%;
+  color: #c62828;
+  background: rgba(255, 0, 0, 0.1019607843);
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 5px;
+  border: 2px solid #ef9a9a;
+  display: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+}
 .container .new-task button {
   position: relative;
   float: right;
@@ -154,21 +169,6 @@ body {
   color: #eee;
   cursor: pointer;
   outline: none;
-}
-.container .new-task .for-error::-webkit-input-placeholder {
-  color: #f00;
-}
-.container .new-task .for-error::-moz-placeholder {
-  color: #f00;
-}
-.container .new-task .for-error:-ms-input-placeholder {
-  color: #f00;
-}
-.container .new-task .for-error::-ms-input-placeholder {
-  color: #f00;
-}
-.container .new-task .for-error::placeholder {
-  color: #f00;
 }
 .container .buttons-control {
   display: -webkit-box;

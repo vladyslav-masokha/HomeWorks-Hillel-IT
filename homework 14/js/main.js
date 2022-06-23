@@ -73,27 +73,32 @@
 
 // ! To Do List
 (() => {
+	// * Variables
+	// TODO: Elements
 	const taskValueEl = document.querySelector('.new-task input');
 	const addTaskBtnEl = document.querySelector('.new-task button');
 	const todoListEl = document.getElementById('list');
 
+	// TODO: Buttons delete
 	const delAllTaskEl = document.getElementById('buttons-control__all-delete');
 	const completeAllTaskEl = document.getElementById(
 		'buttons-control__all-completed'
 	);
+
+	// TODO: Error message
+	const taskErrorEl = document.getElementById('task-error');
 
 	const newTask = () => {
 		const taskValueTextEl = document.createTextNode(taskValueEl.value.trim());
 
 		switch (taskValueEl.value.trim()) {
 			case '':
-				taskValueEl.placeholder = 'Error, enter your task again...';
-				taskValueEl.classList.add('for-error');
+				taskErrorEl.style.display = 'block';
 				break;
 
 			default:
-				taskValueEl.placeholder = 'Enter your task...';
-				taskValueEl.classList.remove('for-error');
+				taskErrorEl.style.display = 'none';
+
 				const liEl = document.createElement('li');
 				const labelEl = document.createElement('label');
 

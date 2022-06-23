@@ -151,6 +151,24 @@ body {
 			}
 		}
 
+		#task-error {
+			display: none;
+			margin: 5px auto 0;
+			width: 90%;
+			color: #c62828;
+			background: #ff00001a;
+			text-align: center;
+			padding: 5px 0;
+			border-radius: 5px;
+			border: 2px solid #ef9a9a;
+			display: none;
+			font: {
+				family: $font-stack;
+				size: 18px;
+				weight: 700;
+			}
+		}
+
 		button {
 			position: relative;
 			float: right;
@@ -165,10 +183,6 @@ body {
 			color: #eee;
 			cursor: pointer;
 			outline: none;
-		}
-
-		.for-error::placeholder {
-			color: #f00;
 		}
 	}
 
