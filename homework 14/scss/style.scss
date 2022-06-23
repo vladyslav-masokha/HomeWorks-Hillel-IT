@@ -42,6 +42,13 @@ body {
 			weight: 700;
 		}
 	}
+
+	p {
+		display: flex;
+		flex-direction: column;
+		padding: 0 40px;
+	}
+
 	.login-form {
 		padding: 0 40px;
 
