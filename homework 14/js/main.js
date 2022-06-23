@@ -113,8 +113,7 @@
 				const spanEl = document.createElement('span');
 				spanEl.append(taskValueTextEl);
 				labelEl.append(spanEl);
-
-				// * Edited
+				
 				const btnEl = document.createElement('button');
 				btnEl.innerText = 'Delete';
 
