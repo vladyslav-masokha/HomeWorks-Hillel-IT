@@ -1,21 +1,22 @@
 (() => {
 	'use strict';
 	const calc = defaultNum => {
+		let num2;
 		return {
 			add: function add(secNum) {
-				return console.log(defaultNum + secNum);
+				return (num2 = defaultNum + secNum), console.log(num2);
 			},
 			sub: function sub(secNum) {
-				return console.log(defaultNum - secNum);
+				return (num2 = defaultNum - secNum), console.log(num2);
 			},
 			div: function div(secNum) {
-				return console.log(defaultNum / secNum);
+				return (num2 = defaultNum / secNum), console.log(num2);
 			},
 			mul: function mul(secNum) {
-				return console.log(defaultNum * secNum);
+				return (num2 = defaultNum * secNum), console.log(num2);
 			},
 			getResult: function getResult() {
-				return console.log(defaultNum);
+				return console.log(num2);
 			},
 		};
 	};
