@@ -15,7 +15,7 @@
 				console.log((defaultNum *= secNum));
 			},
 			getResult: function getResult() {
-				console.log(defaultNum);
+				return defaultNum;
 			},
 		};
 	};
