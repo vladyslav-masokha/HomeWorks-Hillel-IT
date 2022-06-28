@@ -24,7 +24,7 @@
 	first.add(33);
 	first.sub(12);
 	first.div(2);
-	first.mul(4);
+	first.mul(5);
 
 	first.getResult();
 })();
