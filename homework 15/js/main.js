@@ -3,19 +3,19 @@
 	const calc = defaultNum => {
 		return {
 			add: function add(secNum) {
-				return console.log((defaultNum += secNum));
+				console.log((defaultNum += secNum));
 			},
 			sub: function sub(secNum) {
-				return console.log((defaultNum -= secNum));
+				console.log((defaultNum -= secNum));
 			},
 			div: function div(secNum) {
-				return console.log((defaultNum /= secNum));
+				console.log((defaultNum /= secNum));
 			},
 			mul: function mul(secNum) {
-				return console.log((defaultNum *= secNum));
+				console.log((defaultNum *= secNum));
 			},
 			getResult: function getResult() {
-				return console.log(defaultNum);
+				console.log(defaultNum);
 			},
 		};
 	};
