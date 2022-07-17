@@ -79,14 +79,11 @@ function updateCartTotal() {
 	if (localStorage.getItem('cart')) {
 		const cart = JSON.parse(localStorage.getItem('cart'));
 		items = cart.length;
-		const newDate = new Date().toDateString();
 		for (let i = 0; i < items; i++) {
 			price = parseFloat(JSON.parse(cart[i]).price.split('$')[1]);
 			productName = JSON.parse(cart[i]).productName;
 			cartTable +=
 				'<tr><td>' +
-				newDate +
-				'</td><td>' +
 				productName +
 				'</td><td>$' +
 				price.toFixed(2) +
@@ -94,7 +91,6 @@ function updateCartTotal() {
 			total += price;
 		}
 	}
-	// new Date().toDateString()
 	document.getElementById('total').innerHTML = total.toFixed(2);
 	document.getElementById('cart-table').innerHTML = cartTable;
 	document.getElementById('items-quantity').innerHTML = items;
@@ -120,3 +116,35 @@ function emptyCart() {
 		}
 	}
 }
+
+const order = () => {
+	let price = 0,
+		items = 0,
+		productName = '',
+		orders = '';
+
+	if (localStorage.getItem('cart')) {
+		const cart = JSON.parse(localStorage.getItem('cart'));
+		items = cart.length;
+		const newDate = new Date().toDateString();
+		for (let i = 0; i < items; i++) {
+			price = parseFloat(JSON.parse(cart[i]).price.split('$')[1]);
+			productName = JSON.parse(cart[i]).productName;
+			orders +=
+				'<tr><td>' +
+				newDate +
+				'</td><td>' +
+				productName +
+				'</td><td>$' +
+				price.toFixed(2) +
+				'</td></tr>';
+		}
+		localStorage.removeItem('cart');
+	}
+	document.getElementById('orders').innerHTML = orders;
+	document.getElementById('cart-table').innerHTML = '';
+	document.getElementById('total').innerHTML = 0;
+	document.getElementById('items-quantity').innerHTML = 0;
+};
+
+document.getElementById('checkout').addEventListener('click', order);
