@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>HW 17</title>
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="./css/reset.css" />
+		<link rel="stylesheet" href="./css/style.css" />
+
+		<!-- JS -->
+		<script src="./js/renderProducts.js" defer></script>
+		<script src="./js/Cart.js" defer></script>
+		<script src="./js/orders.js" defer></script>
+	</head>
+	<body>
+		<div class="wrapper">
+			<!-- Шапка -->
+			<header class="header">
+				<div class="wrap">
+					<div class="header__body">
+						<!-- Логотип -->
+						<div class="header__logo">
+							<a href="./index.html" class="header__logo_link">HW 17</a>
+						</div>
+					</div>
+				</div>
+			</header>
+
+			<div class="shop">
+				<div class="container">
+					<div id="alerts"></div>
+					<div class="products"></div>
+
+					<div class="cart-container">
+						<h2>Корзина</h2>
+						<table>
+							<thead>
+								<tr>
+									<th><strong>Товар</strong></th>
+									<th><strong>Ціна</strong></th>
+								</tr>
+							</thead>
+							<tbody id="cart-table"></tbody>
+						</table>
+						<hr />
+						<table id="cart-totals">
+							<tr>
+								<td><strong>Кількість</strong></td>
+								<td><strong>Фінальна ціна</strong></td>
+							</tr>
+							<tr>
+								<td>x <span id="items-quantity">0</span></td>
+								<td>$<span id="total">0</span></td>
+							</tr>
+						</table>
+
+						<div class="cart-buttons">
+							<button id="empty-cart">Очистити корзину</button>
+							<button id="checkout">Замовити</button>
+						</div>
+
+						<hr />
+
+						<h2>Мої замовлення</h2>
+						<table>
+							<thead>
+								<tr>
+									<th><strong>Дата</strong></th>
+									<th><strong>Товар</strong></th>
+									<th><strong>Ціна</strong></th>
+								</tr>
+							</thead>
+							<tbody id="orders"></tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+
+			<!-- Футер -->
+			<footer class="footer">
+				<div class="wrap">
+					<div class="footer__body">
+						<span class="copyright">&copy;2022 Vladyslav Masokha</span>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>
