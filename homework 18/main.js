@@ -7,26 +7,20 @@ class HtmlElement {
 		this.text = text;
 	}
 
-	render(tag) {
-		const out = document.querySelector(tag);
+	render(pos) {
 		const element = document.createElement(this.tag);
-
 		Object.keys(this.atributes).forEach(e => {
 			element.setAttribute(e, this.atributes[e]);
 		});
 
 		element.innerText = this.text;
-
-		out.append(element);
+		document.querySelector(pos).append(element);
 	}
 }
 
 const div = new HtmlElement(
-	'button',
-	{
-		id: 'happy',
-		class: 'very-happy',
-	},
-	'Click me'
+	'div',
+	{ id: 'block1', class: 'block1' },
+	'Hello World'
 );
-div.render('#block1');
+div.render('body');
