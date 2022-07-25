@@ -1,0 +1,45 @@
+.slider {
+  width: 330px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.slider__body {
+  overflow: hidden;
+}
+.slider__line {
+  width: 1650px;
+  display: flex;
+  position: relative;
+  left: 0;
+  transition: all 1s ease-in-out;
+  background: #c4c4c4;
+  padding: 15px 0;
+}
+.slider__line img {
+  width: 300px;
+  height: 200px;
+  margin: 0 15px;
+}
+
+.prev {
+  position: absolute;
+  top: 45%;
+  left: -50px;
+  cursor: pointer;
+}
+
+.next {
+  position: absolute;
+  top: 45%;
+  right: -50px;
+  cursor: pointer;
+}
+
+.clock {
+  display: flex;
+}
+.clock img {
+  width: 30px;
+}
